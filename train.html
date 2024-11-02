@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Code QR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <style>
+        #qrcode {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Générateur de Code QR</h1>
+    <p>Scannez le code QR ci-dessous pour accéder à des informations supplémentaires :</p>
+    <div id="qrcode"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Remplacez 'Votre lien ou texte ici' par ce que vous voulez encoder
+            $('#qrcode').qrcode({
+                text: 'file:///home/chronos/u-5973b0d283a54bf364fb3f15a986743c5b59529e/MyFiles/GOD%20WILL/index.html#photos', // Mettez ici le lien de votre page
+                width: 128, // Largeur du QR code
+                height: 128 // Hauteur du QR code
+            });
+        });
+    </script>
+</body>
+</html>
